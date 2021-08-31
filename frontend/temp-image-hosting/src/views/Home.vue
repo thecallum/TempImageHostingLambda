@@ -82,8 +82,8 @@ export default {
 
     async getUploadUrl(fileName) {
       try {
-        return await fetch(`${BASE_API_URL}/api/s3?fileName=${fileName}`).then(
-          (res) => res.text()
+        return await fetch(`${BASE_API_URL}?fileName=${fileName}`).then((res) =>
+          res.text()
         );
       } catch (err) {
         console.error(err);
